@@ -17,7 +17,9 @@
       for (i = 0, len = ref.length; i < len; i++) {
         pair = ref[i];
         ref1 = pair.split('='), key = ref1[0], value = ref1[1];
-        this.vars[decode(key)] = decode(value);
+        if (key !== '') {
+          this.vars[decode(key)] = decode(value);
+        }
       }
     }
 

@@ -9,8 +9,9 @@ class QueryString
 		@vars = {}
 		for pair in @params
 			[key, value] = pair.split '='
-			@vars[decode key] = decode value
-
+			if key isnt ''
+				@vars[decode key] = decode value
+	
 	##### Methods
 
 	# Set a key to a specific value
