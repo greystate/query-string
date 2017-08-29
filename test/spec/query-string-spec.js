@@ -20,4 +20,11 @@ describe("QueryString", function() {
 		qs.setKey("keyname", "value");
 		expect(qs.toString()).toEqual("?keyname=value");
 	});
+	
+	it("can remove a key", () => {
+		const qs = new QueryString("?a=1&b=2&c=3");
+		qs.removeKey("b");
+		expect(qs.toString()).toEqual("?a=1&c=3");
+	});
+	
 });
