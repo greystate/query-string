@@ -54,6 +54,12 @@
 		"oF": 0,
 		"oS": 0,
 		"sC": 0
+		},
+	"\/test": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/dist\/test",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -2053,7 +2059,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, docs\t",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, docs, \/test",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
