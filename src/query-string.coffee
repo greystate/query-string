@@ -4,7 +4,7 @@ class QueryString
 	# `input` defaults to the document's querystring, e.g. `"?key=value&v=0"`,
 	# stripping off the initial "?"
 	constructor: (input = window.document.location.search) ->
-		input = input.substr 1 if input.charAt 0 is "?"
+		input = input.substr 1 if input.charAt(0) is "?"
 		@params = input.split '&'
 		@vars = {}
 		for pair in @params

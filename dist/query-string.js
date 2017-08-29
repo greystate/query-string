@@ -8,7 +8,7 @@
       if (input == null) {
         input = window.document.location.search;
       }
-      if (input.charAt(0 === "?")) {
+      if (input.charAt(0) === "?") {
         input = input.substr(1);
       }
       this.params = input.split('&');
