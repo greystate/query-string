@@ -8,7 +8,7 @@
       if (input == null) {
         input = window.document.location.search;
       }
-      if (input.charAt(0 === "?")) {
+      if (input.charAt(0) === "?") {
         input = input.substr(1);
       }
       this.params = input.split('&');
@@ -17,7 +17,9 @@
       for (i = 0, len = ref.length; i < len; i++) {
         pair = ref[i];
         ref1 = pair.split('='), key = ref1[0], value = ref1[1];
-        this.vars[decode(key)] = decode(value);
+        if (key !== '') {
+          this.vars[decode(key)] = decode(value);
+        }
       }
     }
 
