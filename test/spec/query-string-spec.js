@@ -5,11 +5,11 @@ describe("QueryString", function() {
 		expect(qs.toString()).toEqual("?someKey=value");
 	});
 	
-	it("will strip the '?' character if its the first", function() {
+	it("will strip the '?' character if it's the first", function() {
 		expect(new QueryString("?myVariable=MyValue").toString()).toEqual("?myVariable=MyValue");
 	});
 	
-	it("can get the value for a key", function() {
+	it("can get the value of a key", function() {
 		const qs = new QueryString("?Key1=YES&Key2=NO&Key3=");
 		expect(qs.getKey("Key1")).toEqual("YES");
 		expect(qs.getKey("Key2")).toEqual("NO");
@@ -26,5 +26,12 @@ describe("QueryString", function() {
 		qs.removeKey("b");
 		expect(qs.toString()).toEqual("?a=1&c=3");
 	});
+	
+	it("shouldn't fail removing a non-existing key", () => {
+		qs = new QueryString('kewkomber=false');
+		expect(qs.removeKey('bahmitzvah'));
+		expect(qs.toString()).toBe('?kewkomber=false');
+	});
+	
 	
 });
