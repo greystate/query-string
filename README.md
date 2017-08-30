@@ -23,6 +23,6 @@ qs.removeKey('rnd');
 
 //Put on a link:
 const link = document.querySelector('.homelink');
-link.href = `/#{qs.toString()}`;
+link.href = `/${qs.toString()}`;
 ```
 
